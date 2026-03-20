@@ -16,6 +16,9 @@ CLAUDE.md
 # OS
 .DS_Store
 
+# docs (nur lokal)
+docs/
+
 # env
 .env
 .env*.local
