@@ -10,9 +10,8 @@
   --color-gray-light: #f5f5f5;
   --color-accent: #85681f;
   --font-stack:
-    "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif;
-  --font-heading: "Indie Flower", cursive;
+    "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
 }
 
 /* === Reset === */
@@ -220,30 +219,11 @@ nav .nav-logo:hover {
   text-align: center;
 }
 
-.hero-business-name {
-  font-family: var(--font-heading);
-  font-size: 2.8rem;
-  font-weight: 400;
-  color: var(--color-secondary);
-  line-height: 1.2;
+.hero-banner {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
   margin-bottom: 0.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.hero-bee-icon {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-}
-
-@media (min-width: 640px) {
-  .hero-bee-icon {
-    width: 80px;
-    height: 80px;
-  }
 }
 
 .hero-tagline {
@@ -319,9 +299,8 @@ nav .nav-logo:hover {
     text-align: left;
   }
 
-  .hero-business-name {
-    font-size: 3.2rem;
-    justify-content: flex-start;
+  .hero-banner {
+    max-width: 700px;
   }
 
   .hero-buttons {
@@ -342,9 +321,8 @@ nav .nav-logo:hover {
 
 /* === Section Headings (global) === */
 main section h2 {
-  font-family: var(--font-heading);
-  font-size: 2.6rem;
-  font-weight: 400;
+  font-size: 1.8rem;
+  font-weight: 700;
   color: var(--color-secondary);
   text-align: center;
   margin-bottom: 2.5rem;
@@ -413,7 +391,13 @@ main section h2 {
 
 @media (min-width: 640px) {
   .services-grid {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
@@ -432,10 +416,22 @@ main section h2 {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-.service-image-placeholder {
+.service-image {
   width: 100%;
-  aspect-ratio: 3 / 2;
-  background-color: #e0e0e0;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.service-card-text {
+  padding: 1rem 1rem 1.25rem;
+}
+
+.service-card-text p {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  line-height: 1.5;
+  margin-top: 0.5rem;
 }
 
 /* === Shared Icon Style === */
@@ -455,7 +451,6 @@ main section h2 {
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--color-secondary);
-  padding: 1rem 1rem 1.25rem;
 }
 
 .target-groups-heading {
@@ -498,6 +493,13 @@ main section h2 {
   width: 100%;
   aspect-ratio: 16 / 9;
   background-color: #e0e0e0;
+}
+
+.target-group-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
 }
 
 .target-group-text {
@@ -698,9 +700,8 @@ a.contact-card:hover {
 }
 
 .legal-card h1 {
-  font-family: var(--font-heading);
-  font-size: 2.6rem;
-  font-weight: 400;
+  font-size: 1.8rem;
+  font-weight: 700;
   color: var(--color-secondary);
   margin-bottom: 1.5rem;
   border-bottom: 2px solid var(--color-primary);
