@@ -4,6 +4,7 @@
 # testing
 /test-results
 /playwright-report
+.playwright-mcp/
 
 # IDE
 .idea/
