@@ -201,35 +201,50 @@ nav .nav-logo:hover {
 
 /* === Hero === */
 #hero {
-  background-color: var(--color-background);
-  padding: 3rem 1rem;
+  padding: 0;
+}
+
+.hero-background {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-team-image {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-content {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  animation: fadeInUp 0.8s ease-out both;
-}
-
-.hero-text {
   text-align: center;
+  padding: 2rem 1rem;
+  animation: fadeInUp 0.8s ease-out both;
 }
 
 .hero-banner {
   width: 100%;
-  max-width: 700px;
+  max-width: 800px;
   height: auto;
   margin-bottom: 0.75rem;
 }
 
 .hero-tagline {
   font-size: 1.15rem;
-  color: var(--color-text-light);
-  margin-bottom: 1.5rem;
+  color: var(--color-text);
+  margin-bottom: 1.25rem;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
 }
 
 .hero-buttons {
@@ -267,14 +282,6 @@ nav .nav-logo:hover {
   background: var(--color-primary-dark);
 }
 
-.hero-image-placeholder {
-  width: 100%;
-  max-width: 400px;
-  aspect-ratio: 4 / 3;
-  background-color: #e0e0e0;
-  border-radius: 12px;
-}
-
 /* Hero load animation */
 @keyframes fadeInUp {
   from {
@@ -288,28 +295,8 @@ nav .nav-logo:hover {
 }
 
 @media (min-width: 640px) {
-  .hero-content {
-    flex-direction: row;
-    align-items: center;
-    text-align: left;
-  }
-
-  .hero-text {
-    flex: 1;
-    text-align: left;
-  }
-
-  .hero-banner {
-    max-width: 700px;
-  }
-
-  .hero-buttons {
-    justify-content: flex-start;
-  }
-
-  .hero-image-placeholder {
-    max-width: 350px;
-    flex-shrink: 0;
+  .hero-team-image {
+    height: 920px;
   }
 }
 
