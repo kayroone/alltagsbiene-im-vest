@@ -508,12 +508,6 @@ main section h2::after {
   box-shadow: var(--shadow-hover);
 }
 
-.target-group-image-placeholder {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: linear-gradient(135deg, var(--color-warm-bg), #f0e4c8);
-}
-
 .target-group-image {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -987,6 +981,12 @@ footer a:hover {
 }
 .contact-card.animate-on-scroll:nth-child(5) {
   transition-delay: 0.32s;
+}
+.contact-card.animate-on-scroll:nth-child(6) {
+  transition-delay: 0.4s;
+}
+.contact-card.animate-on-scroll:nth-child(7) {
+  transition-delay: 0.48s;
 }
 
 /* Global transitions */
